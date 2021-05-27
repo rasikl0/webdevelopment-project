@@ -1,99 +1,23 @@
 
+
 * {
   box-sizing: border-box;
 }
 
-body {
-  background-color: #f1f1f1;
-  font-family: Arial;
-  padding: 20px;
-}
 
-h1 {
-  font-size: 50px;
-  word-break: break-all;
-}
-
-/* this is portfoilio design */
-.prtf_main {
-  margin: auto;
-  max-width: 1200px;
-  }
-
-
-
-.prtf_row {
-  margin: 10px -15px;
-}
-
-/* Makes padding space between each column */
-.prtf_row,
-.prtf_row > .prtf_col {
-  padding: 10px;
-}
-
-/* four columns next to each other each occupying 25% area */
-.prtf_col {
+.column {
   float: left;
-  width: 25%;
-}
-
-/* Clear floats after rows */ 
-.prtf_row:after {
-     clear: both;
-     display: table;
-}
-
-/* Content */
-.prtf_cont {
-  background-color: white;
-  padding: 10px;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
-  .prtf_col {
-    width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .prtf_col {
-    width: 100%;
-  }
-}
-
-/* CV table design */
-
-table {
-  width: 75%;
-    border-collapse: collapse;
-    margin-left: 30px;
-
-  
-}
-
-td, th {
-  border: 1px solid #f7f7f8;
-  text-align: left;
-  padding: 6px;
-}
-
-tr:nth-child(odd) {
-  background-color: #f7f7f8;
-}
-
-.table_column {
-  float: left;
+  height: 90px; 
+  padding: 9px;
+  margin-top: 5px;
   width: 50%;
-  padding: 10px;
-  height: 150px; /* Should be removed. Only for demonstration */
+  border-radius: 2%;
 }
 
-/* Clear floats after the columns */
-.table_row:after {
+
+.row:after {
+  content: "";
   clear: both;
   display: table;
-  
+ 
 }
