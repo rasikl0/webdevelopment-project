@@ -15,29 +15,74 @@ p{
 a{
   text-decoration: none;
 }
+
 .page_image_home{
-  
-  color: rgb(241, 236, 243);
-  text-align: center;
+  background-image: url('../image/hari.jpg');
+  color: white;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+ background-repeat: no-repeat;
+ background-position: center;
+ 
+ height: 600px;
+ width: 100%;
 }
 
 .page_image_contact{
-  color: rgb(132, 85, 170);
-  text-align: center;
-
+  background-image: url('../image/sachit2.jpg');
+  color: white;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+ background-repeat: no-repeat;
+ background-position: center;
+ 
+ height: 600px;
+ width: 100%;
 }
 
 .page_image_portfolio{
-  color: rgb(212, 211, 223);
-  text-align: center;
-
+  background-image: url('../image/galaxy.jpg');
+  color: white;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+ background-repeat: no-repeat;
+ background-position: center;
+ 
+ height: 650px;
+ width: 100%;
+}
+.page_image_sitereport{
+  background-image: url('../image/galaxy1.jpg');
+  color: white;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+ background-repeat: no-repeat;
+ background-position: center;
+ 
+ height: 600px;
+ width: 100%;
 }
 
 .page_image_CV{
-  
-  color: rgb(241, 237, 243);
-  text-align: center;
+  background-image: url('../image/sachit4.jpg');
+  color: white;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+ background-repeat: no-repeat;
+ background-position: center;
+ 
+ height: 700px;
+ width: 100%;
 }
+
+
+
+
 
 .homepage_image{
   width: 100%;
@@ -47,7 +92,7 @@ a{
 
 .contactpage_image{
   width: 100%;
-  height: 700px;
+  height: 500px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.50.7))
 }
 
@@ -58,13 +103,8 @@ a{
 }
 
 .overlay_text{
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  
+  transform: translate(10%, 230%);
 }
-
 .sliders {
   animation: motion 8s infinite;
   
@@ -73,7 +113,7 @@ a{
   }
 
 @keyframes motion {
-  from {left: -230px;}
+  from {left: -130px;}
   to {left: 10px;}
 }
 
@@ -136,10 +176,6 @@ text-transform: capitalize;
     padding-left:10px;
     font-size: 18px;
 }
-/* .content-info i{
-    margin-right: 20px;
-    font-size: 25px;
-} */
 .contact-form{
     max-width: 00px;
     margin-right: 50px;
@@ -193,13 +229,13 @@ text-transform: capitalize;
     background:#2ee389 ;
     color: #fff;
     border:none ;
-    width:120px ;
-    height:40px ;
+    width:119px ;
+    letter-spacing:2px ;
+    border-radius:5px ;
+    height:42px ;
     font-size:15px ;
     font-weight:600 ;
     text-transform:uppercase ;
-    letter-spacing:2px ;
-    border-radius:5px ;
     cursor: pointer;
     transition:0.3s ;
     transition-property:background;
@@ -216,26 +252,24 @@ text-transform: capitalize;
     box-sizing: border-box;
   }
 
-input[type=email] select{
-    width: 100%;
-    float:right;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-  }
-
-
-  /* contact form page design */
 
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
+  resize: vertical;
+ }
+
+ input[type=email] select{
+  width: 100%;
+  float:right;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   resize: vertical;
 }
 
@@ -278,104 +312,169 @@ input[type=submit]:hover {
 
 /*------------------------------------------------------------------------------------------- navigation bar -------------------------------------------------------------------------------------*/
 
+
+.for_navigation{
+  position:relative;
+  width:100.5%;
+  display:flex;
+  background:rgb(82, 55, 85); 
+  margin-top: -5px;
+  justify-content: space-between;
+  align-items: center;
+  transition:0.4s
+}
+
+.navi-des{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .MyName {
-    margin: .5rem;
-    font-size: 1.75rem;
+  margin: .5rem;
+  font-size: 1.75rem;
+  color: rgb(255, 255, 255);
 }
 
-.navigation {
-    display: flex;
-    position: relative;
-    background-color: rgb(82, 55, 85);
-    justify-content: space-between;
-    align-items: center;
-    color: rgb(255, 255, 255);
+.list_hamm{
+  display:flex;
+  align-items: center;
+  z-index: 1;
+  flex-direction: row;
+  justify-content: center;
+  transition: 0.5s;
 }
 
 
-.navigation_menu {
-    height: 100%;
+.list_hamm li{
+  list-style-type: none;
+
 }
 
-.navigation_menu ul {
-    display: flex;
-    padding: 0;
-
-    margin: 0;
-    }
-    
-
-.navigation_menu li {
-    list-style: none;
+.list_hamm li a{
+  color: #fff;
+  text-decoration: none;
+  display:block;
+  font-size: 15px;
+  line-height: 2;
+  padding-left:42px;
+  padding-right: 42px;
+  transition:0.3s;
 }
 
-.navigation_menu li a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding: 1rem;
+.list_hamm li a:hover {
+  background-color: rgb(172, 152, 180);
 }
 
-.navigation_menu li:hover {
-    background-color: rgb(204, 105, 243);
+.icon_ham{
+  position:relative;
+  width:29px;
+  height: 4px;
+  border-radius: 10px;
+  z-index: 4;
+  transition:0.4s;
+  background:#fff;
+  cursor: pointer;
+  
 }
 
-.button_hover {
-    display: none;
-    height: 22px;
-    justify-content: space-between;
-    flex-direction: column;
-    right: 1rem;
-    top: .7rem;
-    width: 30px;
-    
+.icon_ham:before,
+.icon_ham:after {
+  content:"";
+  position:absolute;
+  height: 4px;
+  background: #fff;
+  border-bottom: 10px;
+  transition: 0.4s;
+
 }
 
-.button_hover .bar {
-    
-    width: 100%;
-    border-radius: 12px;
-    height: 4px;
-    background-color: rgb(221, 120, 213);
-    
+.icon_ham:before{
+  width: 20px;
+  top: -10px;
+  }
+
+.icon_ham:after{
+  width: 25px;
+  top: 10px;
 }
 
-@media (max-width: 800px) {
-
-    .button_hover {
-        display: flex;
-    }
-
-    .navigation_menu {
-        display: none;
-        width: 100%;
-    }
-
-    .navigation_menu ul {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .navigation_menu ul li {
-        text-align: center;
-    }
-
-    .navigation_menu ul li a {
-        padding: .5rem 1rem;
-    }
-
-    .navigation_menu.active {
-        display: flex;
-    }
+.hamm_menuu {
+  position:absolute;
+  height:100%;
+  width: 32px;
+  cursor: pointer;
+  z-index: 3;
+  opacity: 0;
 }
 
-/* portfolio */
+.icon_ham,
+.hamm_menuu{
+  display: none;
+}
+
+.navi-des input:checked ~ .icon_ham{
+  background: transparent;
+}
+
+.navi-des input:checked ~ .icon_ham:before{
+  top:0;
+  transform: rotate(-45deg);
+}
+.navi-des input:checked ~ .icon_ham:after{
+  
+  width:30px;
+  top:0;
+  transform: rotate(45deg);
+  
+}
+
+.navi-des input:checked ~ .list_hamm{
+      right: 0;
+}
+
+@media screen and (max-width: 994px){
+  .icon_ham,
+  .hamm_menuu{
+      display: block;
+  }
+  .for_navigation{
+      padding: 12px 22px;
+  }
+  .list_hamm{
+      flex-direction: column;
+      position: fixed;
+      justify-content: start;
+      align-items:center;
+      top: 0;
+      padding-top: 67px;
+      width: 250px;
+      right: -300px;;
+      background:rgb(82, 55, 85); 
+      height: 100%;
+      
+  }
+  .list_hamm li{
+      width:100%
+  }
+  .list_hamm li a,
+  .list_hamm li a :hover{
+      padding:29px;
+      font-size: 23px;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+  }
+}
+
+
+
+
+
 h1 {
     font-size: 50px;
     word-break: break-all;
   }
   
-  /* this is portfoilio design */
+  
   .prtf_main {
     margin: auto;
     max-width: 1200px;
@@ -389,38 +488,38 @@ h1 {
     
      }
   
-  /* Makes padding space between each column */
+  
   .prtf_row,
   .prtf_row > .prtf_col {
     padding: 10px;
   }
   
-  /* four columns next to each other each occupying 25% area */
+  
   .prtf_col {
     float: left;
     width: 25%;
   }
   
-  /* Clear floats after rows */ 
+  
   .prtf_row:after {
        clear: both;
        display: table;
   }
   
-  /* Content */
+
   .prtf_cont {
     background-color: white;
     padding: 10px;
   }
   
-  /* Responsive layout - makes a two column-layout instead of four columns */
+  
   @media screen and (max-width: 900px) {
     .prtf_col {
       width: 50%;
     }
   }
   
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  
   @media screen and (max-width: 600px) {
     .prtf_col {
       width: 100%;
@@ -457,7 +556,7 @@ h1 {
     margin-right: 300px;
   }
 
-  /* footerr of the site */
+  
 
   
     /*--------------------------------------------------------------------------- hover animation----------------------------------------------------------------------------------*/
@@ -470,3 +569,4 @@ h1 {
     .prtf_col:hover {
          transform: scale(1.1); 
     }
+ 
